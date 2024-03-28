@@ -1,0 +1,58 @@
+Formatting Style:
+
+
+Methods - PascalCase
+Variables and Functions - camelCase
+Constants - UPPERCASE
+
+Important things to keep in mind:
+
+1.) Single line comments should be done using // and multiline comments should be done using /* */, depending on the language.
+
+2.) All functions should follow a single responsibility principle. If a function is doing more than one thing, it should be broken down into smaller functions.
+
+3.) Please avoid using magic numbers in the code. They should be declared as constants and used.
+
+4.) Please comment your code wherever necessary.
+
+
+
+Responsibility Breakdown: (Temporary)
+1.) Backend (Node.js or .NET Core) - All three of us
+
+2.) Database (MySQL or MariaDB) - All three of us
+
+3.) C# Bot - Joseph , or anyone who is comfortable with C#
+
+4.) Website(JS) - Aaron, Vince
+
+5.) System Deployment - Joseph
+
+
+
+System Design Specifications (What each part of the system should do, you can add more if you want):
+Backend System:
+1.) Responsible for calling the Hypixel API and then storing and updating the data in the database.
+2.) Responsible for sending the data to the website and the bot.
+3.) Main Logic for the market prices and the profit calculation.
+4.) Once it detects a profitable flip, it should send the data to the bot and the website.
+5.) Should have a function to update the prices of the items in the database every 1 - 5 minutes depending on the configuration.
+6.) Also has the logic for profit calculation of crafts.
+7.) Notifies the bot and the website when a profitable craft is detected.
+
+
+C# Bot:
+1.) The main logic for the bot is to listen to the backend instructions and then send the data to the discord server, pinging specified roles.
+2.) The bot should also have a command to check the current prices of the items in the database.
+3.) We can also implement graphs in the bot to show the price history of the items.
+
+Website:
+1.) The website should display the current prices and history of the items in the database.
+2.) The website should also have a section to show the current profitable flips and crafts.
+
+
+Creation Order:
+1.) Backend
+2.) Database
+3.) C# Bot
+4.) Website
